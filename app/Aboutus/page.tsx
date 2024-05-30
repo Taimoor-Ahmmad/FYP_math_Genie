@@ -12,14 +12,14 @@ interface Person {
 const persons: Person[] = [
   {
     name: "Maqbool Ahmad",
-    techStack: "Python/ML developer",
+    techStack: "AI Developer",
     linkedIn: "https://www.linkedin.com/in/maqbool-ahmad-391b06229",
     email: "Maqbool.riazahmad@gmail.com",
     picture: "./asserts/maqbool.png",
   },
   {
     name: "Ahmad Ali",
-    techStack: "Data Scientist",
+    techStack: "AI Developer",
     linkedIn: "https://www.linkedin.com/in/ahmad-a-176704241",
     email: "toahmada14@gmail.com",
     picture: "./asserts/ahmad.png",
@@ -51,7 +51,7 @@ const Aboutus: React.FC = () => {
   return (
     <div
       id="aboutus"
-      className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-700"
+      className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-700 to-purple-900"
     >
       <div className="flex flex-wrap justify-center gap-4">
         {persons.map((person, index) => (

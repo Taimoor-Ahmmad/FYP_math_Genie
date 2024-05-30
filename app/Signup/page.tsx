@@ -4,7 +4,6 @@ import { useState, FormEvent, ChangeEvent } from "react"; // Import useState, Fo
 import bannerImage from "../../public/asserts/Signup_Vector.png";
 
 export default function Signup(): JSX.Element {
-  // State for form inputs
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [confirmPassword, setConfirmPassword] = useState<string>("");

@@ -22,11 +22,8 @@ const Contactus: React.FC = () => {
         subject: `Message from ${formData.name}`,
         message: formData.message,
       };
-      // Here you can implement your email sending logic using your preferred method
-      // For example:
-      // await fetch('/api/send-email', { method: 'POST', body: JSON.stringify(emailData) });
       alert("Email sent successfully");
-      setFormData({ name: "", email: "", message: "" }); // Clear the form
+      setFormData({ name: "", email: "", message: "" });
     } catch (error) {
       console.error("Error sending email:", error);
       alert("Failed to send email");
@@ -39,7 +36,10 @@ const Contactus: React.FC = () => {
   };
 
   return (
-    <div id="contactus" className="relative flex bg-362147">
+    <div
+      id="contactus"
+      className="relative flex flex-col md:flex-row bg-362147 min-h-screen"
+    >
       <div className="absolute top-0 right-0 m-4">
         <div
           className="w-20 h-20 bg-purple-500 rounded-full"
@@ -47,29 +47,33 @@ const Contactus: React.FC = () => {
         ></div>
       </div>
 
-      <div className="w-1/3 ml-20 h-screen flex flex-col justify-center items-center bg-362147">
+      <div className="md:w-1/3 w-full flex flex-col justify-center items-center bg-362147 p-4 md:p-0">
         <Image
           src="/asserts/square.png"
           alt="Math Genie"
           layout="responsive"
           width={30}
           height={30}
-          className="w-full h-full object-contain lg:w-full xl:w-full"
+          className="hidden md:block w-full h-full object-contain lg:w-full xl:w-full"
         />
-        <span className="text-white mt-12 text-5xl">Feeling Stuck?</span>
-        <span className="text-white text-5xl pt-2">Don't Worry</span>
+        <span className="text-white mt-12 text-2xl md:text-5xl">
+          Feeling Stuck?
+        </span>
+        <span className="text-white text-2xl md:text-5xl pt-2">
+          Don't Worry
+        </span>
       </div>
-      <div className="w-1/2 h-screen bg-362147 flex justify-center items-center">
+      <div className="md:w-1/2 w-full flex justify-center items-center bg-362147 p-4 md:p-0">
         <form
-          className="w-2/3 p-6 rounded-lg shadow-md"
+          className="w-full md:w-2/3 p-6 rounded-lg shadow-md bg-white"
           onSubmit={handleSubmit}
         >
-          <h2 className="text-4xl mb-4 text-white flex justify-center">
+          <h2 className="text-2xl md:text-4xl mb-4 text-black flex justify-center">
             Contact Us
           </h2>
           <div className="mb-4">
             <label
-              className="block text-white text-sm font-bold mb-2"
+              className="block text-black text-sm font-bold mb-2"
               htmlFor="name"
             >
               Name
@@ -85,7 +89,7 @@ const Contactus: React.FC = () => {
           </div>
           <div className="mb-6">
             <label
-              className="block text-white text-sm font-bold mb-2"
+              className="block text-black text-sm font-bold mb-2"
               htmlFor="email"
             >
               Email
@@ -101,13 +105,13 @@ const Contactus: React.FC = () => {
           </div>
           <div className="mb-6">
             <label
-              className="block text-white text-sm font-bold mb-2"
+              className="block text-black text-sm font-bold mb-2"
               htmlFor="message"
             >
               Message
             </label>
             <textarea
-              className="appearance-none border rounded w-full h-[200px] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="appearance-none border rounded w-full h-32 md:h-48 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="message"
               placeholder="Your message"
               value={formData.message}

@@ -1,0 +1,219 @@
+/* Add this CSS to your existing styles or create a new CSS file */
+
+.message-container {
+    flex: 1;
+    padding-left: 2px;
+    margin-bottom: 1rem; /* Add margin bottom for spacing */
+    overflow-y: auto; /* Always show vertical scrollbar */
+    scrollbar-width: thin; /* Thin scrollbar */
+    scrollbar-color: #4b5563 #2d3748; /* Scrollbar track and thumb color */
+  }
+  
+  /* Customize scrollbar track */
+  .message-container::-webkit-scrollbar-track {
+    background-color: #2d3748; /* Scrollbar track color */
+  }
+  
+  /* Customize scrollbar thumb */
+  .message-container::-webkit-scrollbar-thumb {
+    background-color: #4b5563; /* Scrollbar thumb color */
+    border-radius: 6px; /* Rounded corners */
+  }
+  
+  /* Hide scrollbar buttons (arrows) */
+  .message-container::-webkit-scrollbar-button {
+    display: none;
+  }
+
+
+.flex {
+  display: flex;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.text-gray-200 {
+  color: #e5e7eb;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.bg-gray-900 {
+  background-color: #1f2937;
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.p-3 {
+  padding: 0.75rem;
+}
+
+.shadow-md {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.bg-gray-700 {
+  background-color: #374151;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
+.relative {
+  position: relative;
+}
+
+.max-w-md {
+  max-width: 28rem;
+}
+
+.max-w-screen-md {
+  max-width: 48rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
+.bg-gray-800 {
+  background-color: #2d3748;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-gray-400 {
+  border-color: #cbd5e0;
+}
+
+.focus\:outline-none {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.bg-gray-700 {
+  background-color: #374151;
+}
+
+.resize-none {
+  resize: none;
+}
+
+.max-w-sm {
+  max-width: 24rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+.text-blue-400 {
+  color: #60a5fa;
+}
+
+.text-gray-400 {
+  color: #9ca3af;
+}
+
+.text-red-400 {
+  color: #f87171;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.bg-purple-600 {
+  background-color: #7e22ce;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.shadow-md {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+

@@ -2,26 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.message-container {
+  flex: 1;
+  padding-left: 2px;
+  margin-bottom: 1rem; /* Add margin bottom for spacing */
+  overflow-y: auto; /* Always show vertical scrollbar */
+  scrollbar-width: thin; /* Thin scrollbar */
+  scrollbar-color: #4b5563 #2d3748; /* Scrollbar track and thumb color */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* Customize scrollbar track */
+.message-container::-webkit-scrollbar-track {
+  background-color: #2d3748; /* Scrollbar track color */
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* Customize scrollbar thumb */
+.message-container::-webkit-scrollbar-thumb {
+  background-color: #4b5563; /* Scrollbar thumb color */
+  border-radius: 6px; /* Rounded corners */
+}
+
+/* Hide scrollbar buttons (arrows) */
+.message-container::-webkit-scrollbar-button {
+  display: none;
 }

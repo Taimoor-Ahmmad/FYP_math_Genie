@@ -1,0 +1,32 @@
+/* CSS media queries for 320x560 */
+@media (max-width: 320px) {
+    /* Adjust styles for 320x560 */
+    /* For example: */
+    .bg-cover {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+  
+  /* CSS media queries for 375x560 */
+  @media (max-width: 375px) {
+    /* Adjust styles for 375x560 */
+    /* For example: */
+    .bg-cover {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+  
+  /* CSS media queries for 425x560 */
+  @media (max-width: 425px) {
+    /* Adjust styles for 425x560 */
+    /* For example: */
+    .bg-cover {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }

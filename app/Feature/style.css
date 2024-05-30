@@ -1,0 +1,26 @@
+/* Feature.css */
+
+@media (max-width: 374px) {
+    #features .flex.items-start.mb-4 > div > p {
+      display: none;
+    }
+  }
+  
+  @media (min-width: 325px) and (max-width: 374px) {
+    #features .flex.items-start.mb-4 > img {
+      width: 2rem;
+      height: 2rem;
+      margin-right: 1rem;
+    }
+
+    #features .flex.items-start.mb-4 > div {
+      width: calc(100% - 3rem);
+    }
+  }
+  
+  @media (max-width: 324px) {
+    #features .flex.items-start.mb-4 {
+      display: none;
+    }
+  }
+  

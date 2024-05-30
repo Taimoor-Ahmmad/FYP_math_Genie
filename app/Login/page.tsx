@@ -1,16 +1,16 @@
 "use client";
 import { useState } from "react";
-import { useRouter } from "next/navigation"; // Note: using next/navigation for useRouter
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import bannerImage from "../../public/asserts/Login_Vector.png";
-import Button from "../Components/Button1"; // Adjust the path to your components
+import Button from "../Components/Button1";
 import ChatScreen from "../ChatScreen/page";
 
 export default function Login(): JSX.Element {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // State to track login status
-  const router = useRouter(); // Initialize the router
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const router = useRouter();
 
   const handleLogin = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -27,8 +27,7 @@ export default function Login(): JSX.Element {
       .then((response) => response.json())
       .then((data) => {
         if (data.status === "success") {
-          setIsLoggedIn(true); // Set login status to true
-          // Redirect to chat screen
+          setIsLoggedIn(true);
           router.push("/ChatScreen");
         } else {
           alert("Invalid email or password");
@@ -40,12 +39,12 @@ export default function Login(): JSX.Element {
   };
 
   if (isLoggedIn) {
-    return <ChatScreen email={email} />; // Render the chat screen if logged in
+    return <ChatScreen email={email} />;
   }
 
   return (
-    <div className="login_desktop flex flex-col sm:flex-row items-center justify-center min-h-screen bg-cover bg-center bg-Desktop">
-      <div className="desktop-view flex flex-col justify-center mr-1 pl-3 sm:flex-row">
+    <div className="flex flex-col sm:flex-row items-center justify-center min-h-screen bg-cover bg-center bg-Desktop">
+      <div className="hidden sm:flex flex-col justify-center mr-1 pl-3">
         <div className="image-container flex pt-5 flex-col items-center justify-center">
           <Image
             src={bannerImage}
@@ -57,9 +56,9 @@ export default function Login(): JSX.Element {
         </div>
       </div>
 
-      <section className="ml-[270px]">
+      <section className="sm:ml-[270px] w-full sm:w-auto">
         <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-          <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+          <div className="w-full bg-white rounded-lg shadow dark:border sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
             <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
               <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                 Sign in to your account
@@ -109,7 +108,6 @@ export default function Login(): JSX.Element {
                         aria-describedby="remember"
                         type="checkbox"
                         className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800"
-                        required
                       />
                     </div>
                     <div className="ml-3 text-sm">
